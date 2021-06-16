@@ -1,0 +1,76 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// .button {
+//   padding: 0;
+//   border-radius: 5px;
+//   box-sizing: border-box;
+//   font-family: $heading-font-family;
+//   font-weight: 700;
+//   color: $basic-white;
+//   text-transform: uppercase;
+//   transition-property: all;
+//   transition-duration: 0.7s;
+//   cursor: pointer;
+
+//   &:hover,
+//   &:focus {
+//     color: $special-blue;
+//     background-color: $basic-white;
+//   }
+
+//   &:focus,
+//   &:active {
+//     opacity: 0.5;
+//   }
+// }
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 85%;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .container {
+    width: 88%;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .container {
+    width: 90%;
+  }
+}

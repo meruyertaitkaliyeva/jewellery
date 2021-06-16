@@ -1,0 +1,51 @@
+.insta {
+  padding-top: 108px;
+  padding-bottom: 132px
+}
+
+.insta h2 {
+  @include heading-style;
+  margin: 0 0 35px;
+  text-align: center;
+}
+
+.insta p {
+  margin: 0 0 70px;
+  text-align: center;
+
+  & a {
+    color: $basic-dark;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 74px;
+    height: 1px;
+    background-color: $light-brown;
+  }
+}
+
+.insta__list {
+  @include list-style;
+  // display: flex;
+  // flex-wrap: wrap;
+  column-count: 4;
+  column-gap: 27px;
+}
+
+.insta__item {
+  width: 230px;
+  height: fit-content;
+
+  &--big {
+    width: 399px;
+  }
+
+  // &:not(:nth-of-type(4n+4)) {
+  //   margin-right: 27px;
+  // }
+}

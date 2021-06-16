@@ -1,7 +1,7 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
-// const webpack = require('webpack-stream');
+const webpack = require('webpack-stream');
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
@@ -13,7 +13,7 @@ const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
 
-// //Webpack
+//Webpack
 
 // const vendor = () => {
 //   return gulp.src('./source/js/vendor.js')
@@ -30,13 +30,13 @@ const sync = require("browser-sync").create();
 
 // exports.vendor = vendor;
 
-// const script = () => {
-//   return gulp.src('./source/js/script.js')
-//     .pipe(webpack( require('./webpack.config.js') ))
-//     .pipe(gulp.dest('build/js'));
-// }
+const script = () => {
+  return gulp.src('./source/js/script.js')
+    .pipe(webpack( require('./webpack.config.js') ))
+    .pipe(gulp.dest('build/js'));
+}
 
-// exports.script = script;
+exports.script = script;
 
 // Styles
 
@@ -98,7 +98,7 @@ const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    // "source/js/*.js"
+    "source/js/*.js"
   ], {
     base: "source"
   })
@@ -130,7 +130,7 @@ const build = gulp.series(
   clean,
   copy,
   // vendor,
-  // script,
+  script,
   styles,
   sprite,
   html

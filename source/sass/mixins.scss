@@ -1,0 +1,13 @@
+@mixin list-style {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin heading-style {
+  margin: 0;
+  font-family: $heading-font-family;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44.2px;
+}
