@@ -5,7 +5,7 @@
   const accordeonButton = document.querySelectorAll('.accordeon__button');
 
   accordeon.forEach(function (acc) {
-    acc.classList.remove('accordeon__no-js');
+    acc.classList.remove('accordeon-no-js');
   })
 
   function hideAll() {
