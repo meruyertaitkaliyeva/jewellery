@@ -1,0 +1,131 @@
+.catalog {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0;
+}
+
+.catalog__filter-button {
+  display: none;
+}
+
+.catalog__wrapper {
+  width: 74.4%;
+}
+
+.catalog__list {
+  @include list-style;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 40px 30px;
+  padding-bottom: 40px;
+}
+
+.catalog__info {
+  margin-top: 25px;
+  text-align: center;
+
+  h3 {
+    margin: 0 0 15px;
+    font-weight: 500;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18.2px;
+  }
+}
+
+.catalog__pagination {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 0 auto;
+  padding: 40px 0 0;
+  width: 100%;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 1px;
+    background-color: $light-grey;
+  }
+}
+
+.catalog__pagination-direction {
+  font-weight: 500;
+  color: $basic-dark
+}
+
+.catalog__pagination-list {
+  @include list-style;
+  display: flex;
+  width: fit-content;
+}
+
+.catalog__pagination-item {
+  &:not(:last-of-type) {
+    margin-right: 15px;
+  }
+
+  .catalog__pagination-link {
+    font-weight: 500;
+    color: $basic-grey;
+  }
+
+  &--current {
+    .catalog__pagination-link {
+      color: $basic-dark;
+    }
+  }
+}
+
+.catalog__pagination-direction,
+.catalog__pagination-link {
+  transition-property: all;
+  transition-duration: 0.5s;
+
+  &:hover,
+  &:focus {
+    color: $light-brown;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .catalog {
+    flex-direction: column;
+    padding-top: 50px;
+  }
+
+  .catalog__filter-button {
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+    background-color: $light-brown;
+    color: $basic-white;
+  }
+
+  .catalog__filter {
+    display: none;
+  }
+
+  .catalog__wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .catalog__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

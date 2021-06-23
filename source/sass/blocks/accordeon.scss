@@ -1,0 +1,60 @@
+.accordeon__no-js .accordeon__title {
+  display: block;
+  margin: 0;
+}
+
+.accordeon__no-js .accordeon__button {
+  display: none;
+}
+
+.accordeon__item {
+  border: 1px solid $light-brown;
+
+  &:not(:last-of-type) {
+    border-bottom: none;
+  }
+}
+
+.accordeon__title {
+  display: none;
+}
+
+.accordeon__button {
+  position: relative;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-family: $body-font-family;
+  font-weight: 500;
+  text-align: left;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.4s;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    // right: 50px;
+    transform: translateY(-50%);
+    transform: rotate(180deg);
+    width: 15px;
+    height: 8px;
+    background-image: url("../img/icon-angle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.active-item {
+  &::after {
+    transform: rotate(0deg);
+  }
+}
+
+.show {
+  &:nth-of-type(n) {
+    display: block;
+  }
+}

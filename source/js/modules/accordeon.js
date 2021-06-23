@@ -1,25 +1,26 @@
 'use strict';
 
 (function () {
-  const faqAccordeon = document.querySelector('.faq__accordeon');
-  // const faqItem = faqAccordeon.querySelectorAll('.faq__item');
-  const faqButton = faqAccordeon.querySelectorAll('.faq__button');
+  const accordeon = document.querySelectorAll('.accordeon');
+  const accordeonButton = document.querySelectorAll('.accordeon__button');
 
-  faqAccordeon.classList.remove('faq__no-js');
+  accordeon.forEach(function (acc) {
+    acc.classList.remove('accordeon__no-js');
+  })
 
   function hideAll() {
-    faqButton.forEach(function (acc) {
-      acc.classList.remove('active');
+    accordeonButton.forEach(function (acc) {
+      acc.classList.remove('active-item');
       acc.nextElementSibling.classList.remove('show');
     });
   }
 
-  faqButton.forEach(function (acc) {
+  accordeonButton.forEach(function (acc) {
     acc.addEventListener('click', function () {
       if (acc != this) {
         hideAll();
       }
-      this.classList.toggle('active');
+      this.classList.toggle('active-item');
       this.nextElementSibling.classList.toggle('show');
     })
   });

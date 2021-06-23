@@ -21,6 +21,15 @@
   }
 }
 
+.main__heading--catalog {
+  min-height: 261px;
+  background-image: url("../../img/catalog-bg.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/catalog-bg@2x.png");
+  }
+}
+
 .main__heading p {
   @include heading-style;
   position: absolute;

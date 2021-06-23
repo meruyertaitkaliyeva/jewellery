@@ -1,0 +1,58 @@
+.modal__overlay {
+  display: none;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 3;
+}
+
+.modal__window {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+}
+
+.shade {
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.modal__close svg {
+  fill: $basic-dark;
+}
+
+.modal-show {
+  display: block;
+}
+
+.modal__no-js {
+  display: block;
+}

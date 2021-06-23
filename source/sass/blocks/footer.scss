@@ -47,6 +47,7 @@
 .footer__subscription h2 {
   @include heading-style;
   margin-bottom: 25px;
+  text-align: left;
 }
 
 .footer__subscription p {

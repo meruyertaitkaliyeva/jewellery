@@ -15,19 +15,32 @@ body {
   line-height: 20.8px;
   background-color: $basic-white;
   color: $basic-dark;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 // body .modal__window {
 //   width: auto;
 // }
 
-// body .modal-show {
-//   height: 100vh;
-//   overflow-y: scroll;
-// }
+body .modal-show {
+  height: 100vh;
+  overflow-y: scroll;
+}
 
-// .fixed {
-//   position: fixed;
-//   overflow-y: hidden;
-// }
+.fixed {
+  position: fixed;
+  overflow-y: hidden;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  body .header-opened,
+  body .filter {
+    width: 100%;
+  }
+
+  body .header-opened,
+  body .filter-show {
+    height: 100vh;
+    overflow-y: scroll;
+  }
+}

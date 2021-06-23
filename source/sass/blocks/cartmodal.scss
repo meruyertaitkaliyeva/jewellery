@@ -1,0 +1,134 @@
+.cart-modal__window {
+  max-width: 500px;
+  min-height: 439px;
+  width: 43%;
+  margin: auto;
+  padding: 55px 35px;
+  color: $basic-dark;
+  background-color: $basic-white;
+  overflow: hidden;
+}
+
+.cart-modal__window h2 {
+  @include heading-style;
+  font-size: 26px;
+  line-height: 33.8px;
+  margin-bottom: 55px;
+}
+
+.cart-modal__wrapper {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.cart-modal__img-box {
+  margin-right: 20px;
+}
+
+.cart-modal__description {
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.cart-modal__description h3 {
+  @include heading-style;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.cart-modal__description h3,
+.cart-modal__description p,
+.cart-modal__number {
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.cart-modal__tuning {
+  margin-left: auto;
+}
+
+.cart-modal__control {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.cart-modal__number {
+  margin: 10px 0 0;
+  text-align: center;
+}
+
+.cart-modal__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding-top: 20px;
+  position: relative;
+  font-size: 14px;
+  line-height: 18.2px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%;
+    height: 1px;
+    background-color: $light-grey;
+  }
+}
+
+.cart-modal__subtotal {
+  font-weight: 500;
+}
+
+.cart-modal__buttons {
+  @include list-style;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.cart-modal__link {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 24px 20px;
+  text-align: center;
+
+  &--continue {
+    // padding: 28px 23px;
+    color: $basic-dark;
+    background-color: $basic-white;
+    border: 1px solid $light-brown;
+  }
+
+  &--checkout {
+    // padding: 28px 63px;
+    color: $basic-white;
+    background-color: $light-brown;
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .cart-modal__window {
+    width: 80%;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .cart-modal__window {
+    width: 90%;
+  }
+
+  .cart-modal__info {
+    gap: 20px;
+  }
+
+  .cart-modal__info,
+  .cart-modal__buttons {
+    flex-direction: column;
+  }
+}

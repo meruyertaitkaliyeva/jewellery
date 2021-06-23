@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 47px 0 25px;
+  width: 100%;
+  padding: 47px 98px 25px;
   box-sizing: border-box;
+  // overflow-x: hidden;
 
   &::after {
     content: "";
@@ -31,6 +33,17 @@
 .header__logo svg {
   width: 66px;
   height: 66px;
+  transition-property: all;
+  transition-duration: 0.7s;
+}
+
+.header__logo:hover svg,
+.header__logo:focus svg {
+  opacity: 0.7;
+}
+
+.header__logo:focus svg {
+  opacity: 0.5;
 }
 
 .header__navigation {
@@ -48,7 +61,7 @@
 }
 
 .header__navigation-search input {
-  width: 140px;
+  width: 150px;
   height: 21px;
   border: none;
   background: transparent;
@@ -68,7 +81,6 @@
   @include list-style;
   display: flex;
   flex-wrap: wrap;
-  margin-left: auto;
   order: 2;
 }
 
@@ -136,7 +148,7 @@
       content: none;
     }
 
-    &--opened {
+    &-opened {
       background-color: $light-brown;
     }
   }
@@ -170,17 +182,38 @@
   .header__button svg {
     stroke: $basic-dark;
     fill: transparent;
+    transition-property: all;
+    transition-duration: 0.7s;
   }
 
-  .header--closed .header__navigation {
+  .header__button {
+    &:hover svg,
+    &:focus svg {
+      stroke: $light-brown;
+    }
+
+    &:active svg {
+      opacity: 0.5;
+    }
+  }
+
+  .header-opened .header__button {
+    &:hover svg,
+    &:focus svg {
+      stroke: $basic-white;
+      opacity: 0.8;
+    }
+  }
+
+  .header-closed .header__navigation {
     display: none;
   }
 
-  .header--opened svg {
+  .header-opened svg {
     stroke: $basic-white;
   }
 
-  .header--opened .header__navigation {
+  .header-opened .header__navigation {
     display: flex;
   }
 
@@ -263,6 +296,16 @@
   .header__user-item a {
     display: block;
     color: $basic-white;
+
+    &:hover,
+    &:focus {
+      color: $basic-white;
+      opacity: 0.8;
+    }
+
+    &:active {
+      color: $basic-white;
+    }
   }
 
   .header__user-item a {
