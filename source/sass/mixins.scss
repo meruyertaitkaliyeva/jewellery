@@ -11,33 +11,5 @@
   font-weight: 700;
   font-size: 34px;
   line-height: 44.2px;
-}
-
-@mixin track {
-  background: none; /* get rid of Firefox track background */
-  height: 100%;
-  width: 100%;
-}
-
-@mixin thumb {
-  position: relative;
-  background: $light-brown;
-  border: none; /* get rid of Firefox thumb border */
-  border-radius: 50%; /* get rid of Firefox corner rounding */
-  pointer-events: auto; /* catch clicks */
-  width: 15px;
-  height: 15px;
-
-  &::after {
-    content: "55";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 34px;
-    height: 10px;
-    font-size: 14px;
-    line-height: 18.2px;
-    color: $basic-dark;
-  }
+  letter-spacing: 1px;
 }

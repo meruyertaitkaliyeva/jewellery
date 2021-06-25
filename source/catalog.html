@@ -55,7 +55,7 @@
           <a href="#">Login</a>
         </li>
         <li class="header__user-item header__user-item--cart">
-          <a href="#">Cart <span>0</span></a>
+          <a href="#">Cart <span class="cart-count">0</span></a>
         </li>
       </ul>
       <ul class="header__navigation-list">
@@ -77,12 +77,12 @@
       </ul>
     </nav>
   </header>
-  <main class="main main--catalog container">
+  <main class="main main--catalog">
     <h1 class="visually-hidden">CH Jewellery Catalog Page</h1>
     <div class="main__heading main__heading--catalog">
       <p>All Jewellery <span>Discover picks of fashion's finest trends in our jewellery catalog</span></p>
     </div>
-    <div class="main__catalog catalog">
+    <div class="main__catalog catalog container">
       <button class="catalog__filter-button button" type="button">Filter</button>
       <article class="catalog__filter filter filter--nojs">
         <div class="filter__wrapper">
@@ -98,20 +98,20 @@
                 <button class="filter__name accordeon__button" type="button">Product</button>
                 <ul class="filter__list filter__list--product">
                   <li class="filter__item">
-                    <label for="necklaces">Necklaces</label>
                     <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces">
+                    <label for="necklaces">Necklaces</label>
                   </li>
                   <li class="filter__item">
-                    <label for="chokers">Chokers</label>
                     <input class="visually-hidden" type="checkbox" name="chokers" id="chokers">
+                    <label for="chokers">Chokers</label>
                   </li>
                   <li class="filter__item">
-                    <label for="rings">Rings</label>
                     <input class="visually-hidden" type="checkbox" name="rings" id="rings">
+                    <label for="rings">Rings</label>
                   </li>
                   <li class="filter__item">
-                    <label for="earrings">Earrings</label>
                     <input class="visually-hidden" type="checkbox" name="earrings" id="earrings">
+                    <label for="earrings">Earrings</label>
                   </li>
                 </ul>
               </div>
@@ -120,12 +120,12 @@
                 <button class="filter__name accordeon__button" type="button">Material</button>
                 <ul class="filter__list filter__list--material">
                   <li class="filter__item">
-                    <label for="necklaces">Gold</label>
                     <input class="visually-hidden" type="checkbox" name="gold" id="gold">
+                    <label for="gold">Gold</label>
                   </li>
                   <li class="filter__item">
-                    <label for="chokers">Silver</label>
                     <input class="visually-hidden" type="checkbox" name="silver" id="silver">
+                    <label for="silver">Silver</label>
                   </li>
                 </ul>
               </div>
@@ -134,12 +134,12 @@
                 <button class="filter__name accordeon__button" type="button">Collection</button>
                 <ul class="filter__list filter__list--collection">
                   <li class="filter__item">
-                    <label for="necklaces">Pink flamingo</label>
                     <input class="visually-hidden" type="checkbox" name="pink-flamingo" id="pink-flamingo">
+                    <label for="pink-flamingo">Pink flamingo</label>
                   </li>
                   <li class="filter__item">
-                    <label for="chokers">Dreams</label>
                     <input class="visually-hidden" type="checkbox" name="dreams" id="dreams">
+                    <label for="dreams">Dreams</label>
                   </li>
                 </ul>
               </div>
@@ -147,12 +147,17 @@
                 <h3 class="filter__item-title accordeon__title">Price</h3>
                 <button class="filter__name accordeon__button" type="button">Price</button>
                 <div class="filter__price">
-                  <div class="filter__price-bar">
-                    <label class="sr-only" for="left-range">Value A:</label>
-                    <input type="range" name="left-range" id="left-range" min="0" max="200" value="55" />
-                    <label class="sr-only" for="right-range">Value B:</label>
-                    <input type="range" name="right-range" id="right-range" id="left-range" min="0" max="200"
-                      value="155" />
+                  <input type="range" name="left-range" id="left-range" min="0" max="200" value="55">
+                  <label for="left-range"></label>
+                  <output class="filter__price-number filter__price-number--left" for="left-range"></output>
+                  <input type="range" name="right-range" id="right-range" min="0" max="200" value="155">
+                  <label for="right-range"></label>
+                  <output class="filter__price-number filter__price-number--right" for="right-range"></output>
+                  <div class="filter__price-slider">
+                    <div class="filter__price-track"></div>
+                    <div class="filter__price-range"></div>
+                    <div class="filter__price-thumb filter__price-thumb--left"></div>
+                    <div class="filter__price-thumb filter__price-thumb--right"></div>
                   </div>
                 </div>
               </div>
@@ -383,7 +388,7 @@
           </li>
         </ul>
         <div class="catalog__pagination">
-          <a class="catalog__pagination-direction" href="#">Previos</a>
+          <a class="catalog__pagination-direction" href="#">Previous</a>
           <ul class="catalog__pagination-list">
             <li class="catalog__pagination-item catalog__pagination-item--current">1
               <a href="#"></a>
@@ -517,7 +522,7 @@
               <label for="modal-password"></label>
               <input type="password" name="modal-password" id="modal-password" placeholder="Password" required>
             </div>
-            <a class="login-modal__forgotpassword">Forgot your password?</a>
+            <a class="login-modal__forgotpassword" href="#">Forgot your password?</a>
             <button class="login-modal__submit button" type="submit">Log In</button>
             <div class="login-modal__text">
               <p>Don’t have an account?</p>

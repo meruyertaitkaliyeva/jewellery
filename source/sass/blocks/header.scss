@@ -3,9 +3,8 @@
   flex-direction: column;
   position: relative;
   width: 100%;
-  padding: 47px 98px 25px;
+  padding: 43px 98px 18px;
   box-sizing: border-box;
-  // overflow-x: hidden;
 
   &::after {
     content: "";
@@ -106,7 +105,7 @@
   display: flex;
   flex-wrap: wrap;
   width: fit-content;
-  margin: 76px auto 0;
+  margin: 91px auto 0;
 }
 
 .header__navigation-item {
@@ -142,7 +141,7 @@
   .header {
     width: 100%;
     min-height: 126px;
-    padding: 55px 45px;
+    padding: 52px 45px;
 
     &::after {
       content: none;
@@ -219,7 +218,11 @@
 
   .header__navigation {
     flex-direction: column;
-    padding: 65px 0 35px;
+    padding: 70px 0 35px;
+  }
+
+  .header__navigation-search {
+    position: relative;
   }
 
   .header__navigation-search input {
@@ -228,9 +231,6 @@
     padding: 0 35px;
     background: rgba(255, 255, 255, 0.15);
     border-radius: 21px;
-    background-image: url("../../img/icon-lens.svg");
-    background-repeat: no-repeat;
-    background-position: 12px;
     color: $basic-white;
 
     &::placeholder {
@@ -238,8 +238,15 @@
     }
   }
 
+  .header__navigation-search label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+  }
+
   .header__navigation-search svg {
-    display: none;
+    fill: $basic-white;
   }
 
   .header__navigation-list,
@@ -250,11 +257,11 @@
   }
 
   .header__navigation-list {
-    margin: 55px 0 0;
+    margin: 45px 0 0;
   }
 
   .header__user-list {
-    margin: 55px 0 0;
+    margin: 40px 0 0;
   }
 
   .header__navigation-item,
@@ -264,7 +271,7 @@
 
   .header__navigation-item {
     &:not(:last-of-type) {
-      margin-bottom: 40px;
+      margin-bottom: 21px;
     }
   }
 
@@ -274,7 +281,7 @@
     }
 
     &:not(:last-of-type) {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     &--about,
@@ -325,6 +332,11 @@
     min-height: 92px;
     padding: 38px 15px 38px;
   }
+
+  .header__logo {
+    top: 20px;
+  }
+
   .header__logo svg {
     width: 52px;
     height: 52px;
@@ -334,9 +346,12 @@
     padding: 48px 0 12px;
   }
 
-  .header__navigation-list,
+  .header__navigation-list {
+    margin-top: 37px;
+  }
+
   .header__user-list {
-    margin-top: 45px;
+    margin-top: 30px;
   }
 
   .header__user-item {

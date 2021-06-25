@@ -34,12 +34,12 @@
 
 .filter__item-title,
 .filter__name {
-  // height: 68px;
-  padding: 28px 25px;
+  padding: 24px 25px 21px;
   font-size: 16px;
   line-height: 20.8px;
 
   &::after {
+    top: 45%;
     right: 25px;
   }
 }
@@ -52,7 +52,7 @@
 
 .filter__item {
   &:not(:last-of-type) {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 }
 
@@ -93,39 +93,11 @@
     background-color: $light-brown;
   }
 
-  &:focus + label::before,
-  &:hover + label::before,
-  &:checked:hover + label::before,
-  &:checked:focus + label::before {
-    border-color: $basic-dark;
-  }
-
-  &:checked:hover + label::before,
-  &:checked:focus + label::before {
-    background-color: $basic-dark;
-  }
-
   &:active + label::before,
   &:checked:active + label::before {
     opacity: 0.5;
   }
 }
-
-// .filter__item input:checked + .filter__item label::before {
-//   background-color: $light-brown;
-// }
-
-// .filter__item input:focus + .filter__item label::before,
-// .filter__item input:hover + .filter__item label::before,
-// .filter__item input:checked:hover + .filter__item label::before,
-// .filter__item input:checked:focus + .filter__item label::before {
-//   border-color: $basic-dark;
-// }
-
-// .filter__item input:active + .filter__item label::before,
-// .filter__item input:checked:active + .filter__item label::before {
-//   opacity: 0.5;
-// }
 
 .filter__submit {
   margin-bottom: 25px;
@@ -141,58 +113,85 @@
 
 .filter__price {
   display: none;
+  position: relative;
+  height: 35px;
+  margin: 6px 25px 16px;
 }
 
-.filter__price-bar {
-  display: grid;
-  grid-template-rows: max-content 7.5px;
-  margin: 4px auto 23px;
-  width: 80%;
+.filter__price input {
+  position: absolute;
+  top: -2px;
+  pointer-events: none;
+  appearance: none;
+  z-index: 2;
+  height: 1px;
+  width: 100%;
+  opacity: 0;
+
+  &::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 15px;
+    height: 15px;
+    border: 0 none;
+    appearance: none;
+    cursor: pointer;
+  }
+}
+
+.filter__price-slider {
   position: relative;
-  background: linear-gradient(0deg, #ccc 1px, transparent 0);
+  width: 100%;
+  height: 1px;
+  z-index: 1;
+}
 
-  --dif: calc(var(--max) - var(--min));
+.filter__price-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #f0eae4;
+  z-index: 1;
+}
 
-  &::before, &::after {
-    grid-column: 1/ span 2;
-    grid-row: 3;
-    height: 100%;
-    background: #95a;
-    content: ''
+.filter__price-range {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  bottom: 0;
+  right: 25%;
+  background-color: $light-brown;
+  z-index: 2;
+}
+
+.filter__price-thumb {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $light-brown;
+  border-radius: 50%;
+  z-index: 3;
+
+  &--left {
+    left: 25%;
   }
 
-  // &::before {
-  //   margin-left: calc((var(--a) - var(--min))/var(--dif)*100%);
-  //   width: calc((var(--b) - var(--a))/var(--dif)*100%)
-  // }
-
-  // &::after {
-  //   margin-left: calc((var(--b) - var(--min))/var(--dif)*100%);
-  //   width: calc((var(--a) - var(--b))/var(--dif)*100%)
-  // }
+  &--right {
+    right: 25%;
+  }
 }
 
-.sr-only {
+.filter__price-number {
+  background: transparent;
+  color: $basic-dark;
   position: absolute;
-  clip-path: inset(50%);
-}
-
-input[type='range'] {
-  &::-webkit-slider-runnable-track,
-  &::-webkit-slider-thumb, & { -webkit-appearance: none; }
-  grid-column: 1;
-  grid-row: 2;
-  background: none; /* get rid of white Chrome background */
-  color: #000;
-  font: inherit; /* fix too small font-size in both Chrome & Firefox */
-  margin: 0;
-  pointer-events: none; /* let clicks pass through */
-
-  &::-webkit-slider-runnable-track { @include track; }
-  &::-moz-range-track { @include track; }
-
-  &::-webkit-slider-thumb { @include thumb; }
-  &::-moz-range-thumb { @include thumb; }
+  margin-top: 17px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18.2px;
 }
 
 @media (max-width: $tablet-breakpoint) {
@@ -257,10 +256,6 @@ input[type='range'] {
 
   .filter__close svg {
     fill: $basic-white;
-  }
-
-  .filter-show {
-    display: block;
   }
 
   .filter__item-title,

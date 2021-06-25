@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  width: 100%;
 }
 
 .main__heading {
   width: 100%;
   min-height: 463px;
-  margin: auto;
-  position: relative;
+  padding: 182px 350px 60px;
   background-image: url("../../img/desktop-bg1x.png");
   background-color: #564034;
   background-repeat: no-repeat;
@@ -23,6 +23,7 @@
 
 .main__heading--catalog {
   min-height: 261px;
+  padding: 92px 130px 50px;
   background-image: url("../../img/catalog-bg.png");
 
   @media (min-resolution: 2dppx) {
@@ -30,39 +31,80 @@
   }
 }
 
+.main__heading p,
+.main__heading span {
+  text-align: center;
+  color: $basic-white;
+  letter-spacing: 1.5px;
+  }
+
 .main__heading p {
   @include heading-style;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-bottom: 18px;
   font-weight: 700;
   font-size: 45px;
   line-height: 58.5px;
   text-transform: uppercase;
-  text-align: center;
-  color: $basic-white;
-  }
+}
 
 .main__heading span {
   display: block;
-  margin-top: 20px;
+  font-family: $heading-font-family;
   font-weight: 400;
-  font-size: 38px;
-  line-height: 49.4px;
+  font-size: 34px;
+  line-height: 0;
   font-style: italic;
   text-transform: lowercase;
 }
 
+.main__heading--catalog p {
+  font-size: 34px;
+  line-height: 44.2px;
+}
+
+.main__heading--catalog span {
+  font-size: 22px;
+  line-height: 28.6px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .main__heading {
+    padding: 179px 100px 70px;
+  }
+
+  .main__heading--catalog {
+    padding: 92px 60px 40px;
+  }
+}
+
 @media (max-width: $mobile-breakpoint) {
+  .main__heading {
+    padding: 187px 40px;
+  }
+
+  .main__heading--catalog {
+    padding: 80px 20px 30px;
+  }
   .main__heading p {
+    margin-bottom: 16px;
     font-size: 38px;
     line-height: 49.4px;
   }
 
   .main__heading span {
-    margin-top: 16px;
+    font-size: 30px;
+    line-height: 0;
+  }
+
+  .main__heading--catalog p {
     font-size: 34px;
     line-height: 44.2px;
+  }
+
+  .main__heading--catalog span {
+    font-size: 22px;
+    line-height: 26.4px;
   }
 }

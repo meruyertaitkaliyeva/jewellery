@@ -36,7 +36,6 @@
     position: absolute;
     content: "";
     top: 50%;
-    // right: 50px;
     transform: translateY(-50%);
     transform: rotate(180deg);
     width: 15px;
@@ -56,5 +55,24 @@
 .show {
   &:nth-of-type(n) {
     display: block;
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .accordeon__button {
+    &::after {
+      top: 45%;
+      width: 23px;
+      height: 12px;
+      background-size: cover;
+    }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .accordeon__button {
+    &::after {
+      top: 50%;
+    }
   }
 }

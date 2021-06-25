@@ -5,9 +5,8 @@ module.exports = {
     "./source/js/modules/menu.js",
     "./source/js/modules/carousel.js",
     "./source/js/modules/accordeon.js",
-    "./source/js/modules/cartmodal.js",
-    "./source/js/modules/loginmodal.js",
-    "./source/js/modules/filtermodal.js"
+    "./source/js/modules/modal.js",
+    "./source/js/modules/price.js"
   ],
   output: {
     filename: "script.js"

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/styles.min.css">
   <title>CH Jewellery Store</title>
 </head>
+
 <body>
   <header class="header header-closed header--nojs container">
     <a class="header__logo">
@@ -54,7 +55,7 @@
           <a href="#">Login</a>
         </li>
         <li class="header__user-item header__user-item--cart">
-          <a href="#">Cart <span>0</span></a>
+          <a href="#">Cart <span class="cart-count">0</span></a>
         </li>
       </ul>
       <ul class="header__navigation-list">
@@ -79,7 +80,8 @@
   <main class="main">
     <h1 class="visually-hidden">CH Jewellery Store</h1>
     <div class="main__heading">
-      <p>Perfection <span>made to be yours</span></p>
+      <p>Perfection</p>
+      <span>made to be yours</span>
     </div>
     <section class="main__swiper swiper container">
       <h2 class="swiper__title">New In</h2>
@@ -172,12 +174,11 @@
             <a class="swiper-slide__link card-link" href="product.html">
               <div class="swiper-slide__img-box card-link__img">
                 <picture>
-                  <source
-                    srcset="img/necklace-detaildesktop.webp 1x, img/necklace-detaildesktop@2x.webp 2x"
+                  <source srcset="img/necklace-detaildesktop.webp 1x, img/necklace-detaildesktop@2x.webp 2x"
                     type="image/webp">
                   <!-- 1x: 270px; 2x: 540px -->
-                  <img src="img/necklace-detaildesktop.jpg" srcset="img/necklace-detaildesktop@2x.jpg 2x"
-                    width="270" height="284" alt="Золотая цепочка с подвесками и камнями" loading="lazy">
+                  <img src="img/necklace-detaildesktop.jpg" srcset="img/necklace-detaildesktop@2x.jpg 2x" width="270"
+                    height="284" alt="Золотая цепочка с подвесками и камнями" loading="lazy">
                 </picture>
               </div>
               <div class="swiper-slide__description card-link__text">
@@ -351,7 +352,7 @@
           </div>
           <div class="blog__card">
             <p>September 23, 2019</p>
-            <h3 class="blog__card-title">Power of crystal</h3>
+            <h3 class="blog__card-title">Power of crystals</h3>
             <a class="blog__card-link link" href="#">Read Article</a>
           </div>
         </li>
@@ -396,7 +397,8 @@
         </li>
         <li class="faq__item accordeon__item">
           <h3 class="faq__item-title accordeon__title">Can I return the jewellery if it didn’t fit me?</h3>
-          <button class="faq__button accordeon__button" type="button">Can I return the jewellery if it didn’t fit me?</button>
+          <button class="faq__button accordeon__button" type="button">Can I return the jewellery if it didn’t fit
+            me?</button>
           <p></p>
         </li>
       </ul>
@@ -569,9 +571,12 @@
         </button>
         <div class="login-modal__img-box">
           <picture>
-            <source srcset="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash.webp 1x, img/sweet-ice-cream-photography-ootMB9iANOc-unsplash@2x.webp 2x" type="image/webp">
+            <source
+              srcset="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash.webp 1x, img/sweet-ice-cream-photography-ootMB9iANOc-unsplash@2x.webp 2x"
+              type="image/webp">
             <!-- 1x: 430px; 2x: 860px -->
-            <img src="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash.jpg" srcset="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash@2x.jpg 2x" width="430" height="138"
+            <img src="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash.jpg"
+              srcset="img/sweet-ice-cream-photography-ootMB9iANOc-unsplash@2x.jpg 2x" width="430" height="138"
               alt="Золотые украшения с бусинами" loading="lazy">
           </picture>
         </div>
@@ -586,7 +591,7 @@
               <label for="modal-password"></label>
               <input type="password" name="modal-password" id="modal-password" placeholder="Password" required>
             </div>
-            <a class="login-modal__forgotpassword">Forgot your password?</a>
+            <a class="login-modal__forgotpassword" href="#">Forgot your password?</a>
             <button class="login-modal__submit button" type="submit">Log In</button>
             <div class="login-modal__text">
               <p>Don’t have an account?</p>

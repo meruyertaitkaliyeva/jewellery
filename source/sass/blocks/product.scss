@@ -13,8 +13,13 @@
   }
 }
 
+.product__suggestions {
+  padding-bottom: 126px;
+}
+
 .product__suggestions h2 {
   @include heading-style;
+  margin-bottom: 23px;
 }
 
 @media (max-width: $tablet-breakpoint) {
@@ -22,5 +27,19 @@
     &::before {
       content: none;
     }
+  }
+
+  .product__suggestions {
+    padding: 58px 0 74px;
+  }
+
+  .product__suggestions h2 {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .product__suggestions {
+    padding: 52px 0 66px;
   }
 }
