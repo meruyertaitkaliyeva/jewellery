@@ -9,7 +9,7 @@
   width: 100%;
   min-height: 463px;
   padding: 182px 350px 60px;
-  background-image: url("../../img/desktop-bg1x.png");
+  background-image: url("../img/desktop-bg1x.png");
   background-color: #564034;
   background-repeat: no-repeat;
   background-position: center;
@@ -24,10 +24,10 @@
 .main__heading--catalog {
   min-height: 261px;
   padding: 92px 130px 50px;
-  background-image: url("../../img/catalog-bg.png");
+  background-image: url("../img/catalog-bg.png");
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/catalog-bg@2x.png");
+    background-image: url("../img/catalog-bg@2x.png");
   }
 }
 
