@@ -145,7 +145,7 @@
 @media (max-width: $mobile-breakpoint) {
   .blog__list {
     margin-top: 42px;
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 40px 0;
   }
 
