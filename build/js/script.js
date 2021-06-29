@@ -9967,7 +9967,7 @@ module.exports = __webpack_require__(6);
   const headerMain = document.querySelector('.header');
   const navToggleButton = document.querySelector('.header__button--burger');
 
-  headerMain.classList.remove('header--nojs');
+  headerMain.classList.remove('header-no-js');
 
   navToggleButton.addEventListener('click', function () {
     if (headerMain.classList.contains('header-closed')) {

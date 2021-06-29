@@ -73,9 +73,11 @@
   margin-right: 30px;
 }
 
-// .swiper-slide__img-box {
-//   height: 100%;
-// }
+.swiper-slide__img-box {
+  img {
+    aspect-ratio: 270/284;
+  }
+}
 
 .swiper-slide__description {
   @include transition;
@@ -168,6 +170,7 @@
     img {
       width: 100%;
       height: 100%;
+      aspect-ratio: 324/340;
     }
   }
 
@@ -194,10 +197,9 @@
     margin-bottom: 34px;
   }
 
-  // .swiper-slide__img-box {
-  //   width: 130px;
-  //   height: 136px;
-  // }
+  .swiper-slide__img-box {
+    aspect-ratio: 130/136;
+  }
 
   .swiper-slide__description {
     width: 130px;

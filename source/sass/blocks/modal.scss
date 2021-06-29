@@ -54,5 +54,9 @@
 }
 
 .modal__no-js {
-  display: block;
+  top: unset;
+  left: unset;
+  transform: unset;
+  margin: 70px auto 0;
+  box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
 }
