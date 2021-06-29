@@ -19,7 +19,7 @@ const vendor = () => {
   return gulp.src('./source/js/vendor.js')
     .pipe(webpack({
       entry: {
-        imask: './source/js/vendor/swiper.js',
+        swiper: './source/js/vendor/swiper.js',
       },
       output: {
         filename: 'vendor.js',

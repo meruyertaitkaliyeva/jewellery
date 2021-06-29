@@ -11,5 +11,8 @@ module.exports = {
   output: {
     filename: "script.js"
   },
+  optimization: {
+    minimize: false,
+  },
   devtool: false
 };

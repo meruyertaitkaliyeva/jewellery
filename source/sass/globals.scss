@@ -13,6 +13,7 @@ a {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -34,16 +35,32 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.content {
+  a {
+    @include transition;
+    color: $basic-dark;
+
+    &:hover,
+    &:focus {
+      color: $light-brown;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
 .link {
+  @include transition;
   display: block;
   position: relative;
+  padding-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 20.8px;
   text-align: center;
   color: $basic-dark;
-  transition-property: all;
-  transition-duration: 0.5s;
 
   &::after {
     position: absolute;
@@ -76,6 +93,8 @@ input[type="radio"].visually-hidden {
 }
 
 .card-link {
+  display: flex;
+  flex-direction: column;
   color: $basic-dark;
   cursor: pointer;
 }
@@ -99,6 +118,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button {
+  @include transition;
   width: 250px;
   height: 68px;
   padding: 0;
@@ -108,8 +128,6 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
   font-size: 16px;
   line-height: 20.8px;
-  transition-property: all;
-  transition-duration: 0.7s;
   cursor: pointer;
 
   &:hover,
@@ -127,6 +145,7 @@ input[type="radio"].visually-hidden {
 .container {
   margin: 0 auto;
   padding: 0;
+  max-width: 1170px;
   width: 85.5%;
 
   @media (max-width: $tablet-breakpoint) {

@@ -13,3 +13,8 @@
   line-height: 44.2px;
   letter-spacing: 1px;
 }
+
+@mixin transition {
+  transition: background-color, color, border, stroke, fill;
+  transition-duration: 0.5s;
+}

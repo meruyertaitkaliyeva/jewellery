@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 100%;
-  padding: 43px 98px 18px;
+  // width: 100%;
+  padding: 43px 0 18px;
   box-sizing: border-box;
 
   &::after {
@@ -12,7 +12,7 @@
     top: 115px;
     left: 50%;
     transform: translateX(-50%);
-    width: 150%;
+    width: 350%;
     height: 1px;
     background-color: $light-grey;
   }
@@ -30,10 +30,9 @@
 }
 
 .header__logo svg {
+  @include transition;
   width: 66px;
   height: 66px;
-  transition-property: all;
-  transition-duration: 0.7s;
 }
 
 .header__logo:hover svg,
@@ -121,19 +120,18 @@
 
 .header__user-item a,
 .header__navigation-item a {
+  @include transition;
   font-weight: 500;
   color: $basic-dark;
-  transition-property: all;
-  transition-duration: 0.5s;
 
   &:focus,
   &:hover {
-      color: $light-brown;
+    color: $light-brown;
   }
 
   &:active {
-      color: $light-brown;
-      opacity: 0.5;
+    color: $light-brown;
+    opacity: 0.5;
   }
 }
 
@@ -176,16 +174,7 @@
     &--cart {
       width: 18px;
     }
-  }
 
-  .header__button svg {
-    stroke: $basic-dark;
-    fill: transparent;
-    transition-property: all;
-    transition-duration: 0.7s;
-  }
-
-  .header__button {
     &:hover svg,
     &:focus svg {
       stroke: $light-brown;
@@ -194,6 +183,12 @@
     &:active svg {
       opacity: 0.5;
     }
+  }
+
+  .header__button svg {
+    @include transition;
+    stroke: $basic-dark;
+    fill: transparent;
   }
 
   .header-opened .header__button {

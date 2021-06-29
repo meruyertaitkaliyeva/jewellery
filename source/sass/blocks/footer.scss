@@ -1,29 +1,30 @@
 .footer {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 90px 0;
+  padding: 92px 0;
   background-color: $basic-black;
   color: $basic-white;
   box-sizing: border-box;
 }
 
 .footer a {
+  @include transition;
   color: $basic-white;
-  transition-property: all;
-  transition-duration: 0.5s;
 
   &:focus,
   &:hover {
-      color: $light-brown;
+    color: $light-brown;
   }
 
   &:focus svg,
   &:hover svg {
-      fill: $light-brown;
+    fill: $light-brown;
   }
 
   &:active {
-      color: $light-brown;
-      opacity: 0.5;
+    color: $light-brown;
+    opacity: 0.5;
   }
 
   &:active svg {
@@ -40,8 +41,8 @@
 
 .footer__subscription {
   max-width: 500px;
-  width: 42.7%;
-  margin-right: 35px
+  width: 43.5%;
+  margin-right: 35px;
 }
 
 .footer__title {
@@ -95,6 +96,7 @@
 }
 
 .footer__subscription-signup {
+  @include transition;
   padding: 0;
   border: none;
   font-family: $body-font-family;
@@ -104,12 +106,10 @@
   color: $basic-white;
   cursor: pointer;
   outline: none;
-  transition-property: all;
-  transition-duration: 0.5s;
 
   &:focus,
   &:hover {
-      color: $light-brown;
+    color: $light-brown;
   }
 
   &:focus svg,
@@ -118,8 +118,8 @@
   }
 
   &:active {
-      color: $light-brown;
-      opacity: 0.5;
+    color: $light-brown;
+    opacity: 0.5;
   }
 
   &:active svg {
@@ -129,6 +129,7 @@
 }
 
 .footer__subscription-signup svg {
+  @include transition;
   margin-left: 12px;
   stroke: $basic-white;
 }
@@ -137,12 +138,13 @@
   @include list-style;
   column-count: 2;
   column-gap: 71px;
-  margin-top: 6px
+  width: 35%;
+  margin-top: 7px;
 }
 
 .footer__social-list {
   @include list-style;
-  margin-top: 6px
+  margin-top: 7px;
 }
 
 .footer__info-item,
@@ -158,6 +160,7 @@
 }
 
 .footer__social-item svg {
+  @include transition;
   display: inline-block;
   vertical-align: middle;
   width: 15px;
@@ -188,6 +191,7 @@
 
   .footer__info-list {
     column-gap: 86px;
+    width: auto;
   }
 
   .footer__info-list,

@@ -29,15 +29,13 @@
   text-align: left;
   box-sizing: border-box;
   outline: none;
-  transition: 0.4s;
   cursor: pointer;
 
   &::after {
     position: absolute;
     content: "";
     top: 50%;
-    transform: translateY(-50%);
-    transform: rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
     width: 15px;
     height: 8px;
     background-image: url("../img/icon-angle.svg");
@@ -61,7 +59,6 @@
 @media (max-width: $tablet-breakpoint) {
   .accordeon__button {
     &::after {
-      top: 45%;
       width: 23px;
       height: 12px;
       background-size: cover;
@@ -69,10 +66,10 @@
   }
 }
 
-@media (max-width: $mobile-breakpoint) {
-  .accordeon__button {
-    &::after {
-      top: 50%;
-    }
-  }
-}
+// @media (max-width: $mobile-breakpoint) {
+//   .accordeon__button {
+//     &::after {
+//       top: 50%;
+//     }
+//   }
+// }

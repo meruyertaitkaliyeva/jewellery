@@ -5,6 +5,7 @@
   const loginLink = document.querySelector('.header__user-item--login');
   const loginModal = document.querySelector('.login-modal');
   const loginOverlay = document.querySelector('.login-modal__overlay');
+  const loginWindow = document.querySelector('.login-modal__window');
   const loginClose = document.querySelector('.login-modal__close');
   const loginEmail = document.querySelector('#modal-email');
   const filter = document.querySelector('.filter');
@@ -13,6 +14,7 @@
   const addButton = document.querySelector('.profile__add');
   const cartModal = document.querySelector('.cart-modal');
   const cartOverlay = document.querySelector('.cart-modal__overlay');
+  const cartWindow = document.querySelector('.cart-modal__window');
   const cartClose = document.querySelector('.cart-modal__close');
   const cartCount = document.querySelector('.cart-count');
   let count = 0;
@@ -75,9 +77,12 @@
   });
 
   loginOverlay.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    closeModalWindow(loginOverlay);
-    removeModalShade(loginModal);
+    if (evt.target.closest('.modal__window')) {
+      evt.stopPropagation();
+    } else {
+      closeModalWindow(loginOverlay);
+      removeModalShade(loginModal);
+    }
   });
 
   if (window.location.href.endsWith('product.html')) {
@@ -107,9 +112,12 @@
     });
 
     cartOverlay.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      closeModalWindow(cartOverlay);
-      removeModalShade(cartModal);
+      if (evt.target.closest('.modal__window')) {
+        evt.stopPropagation();
+      } else {
+        closeModalWindow(cartOverlay);
+        removeModalShade(cartModal);
+      }
     });
   }
 

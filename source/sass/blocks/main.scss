@@ -6,39 +6,57 @@
 }
 
 .main__heading {
+  position: relative;
   width: 100%;
   min-height: 463px;
+
+  &--catalog {
+    min-height: 261px;
+  }
+}
+
+.main__heading-bg,
+.main__heading-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 463px;
+}
+
+.main__heading-img,
+.main__heading-img--catalog {
+  img {
+    width: 100%;
+    height: fit-content;
+  }
+}
+
+.main__heading-bg {
+  background: rgba(86, 64, 52, 0.7);
+}
+
+.main__heading-text {
   padding: 182px 350px 60px;
-  background-image: url("../img/desktop-bg1x.png");
-  background-color: #564034;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.7;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/desktop-bg2x.png");
-  }
 }
 
-.main__heading--catalog {
+.main__heading-bg--catalog,
+.main__heading-text--catalog {
   min-height: 261px;
-  padding: 92px 130px 50px;
-  background-image: url("../img/catalog-bg.png");
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/catalog-bg@2x.png");
-  }
 }
 
-.main__heading p,
-.main__heading span {
+.main__heading-text--catalog {
+  padding: 92px 130px 50px;
+}
+
+.main__heading-text p,
+.main__heading-text span {
   text-align: center;
   color: $basic-white;
   letter-spacing: 1.5px;
-  }
+}
 
-.main__heading p {
+.main__heading-text p {
   @include heading-style;
   margin-bottom: 18px;
   font-weight: 700;
@@ -47,7 +65,7 @@
   text-transform: uppercase;
 }
 
-.main__heading span {
+.main__heading-text span {
   display: block;
   font-family: $heading-font-family;
   font-weight: 400;
@@ -57,12 +75,12 @@
   text-transform: lowercase;
 }
 
-.main__heading--catalog p {
+.main__heading-text--catalog p {
   font-size: 34px;
   line-height: 44.2px;
 }
 
-.main__heading--catalog span {
+.main__heading-text--catalog span {
   font-size: 22px;
   line-height: 28.6px;
   text-transform: none;
@@ -70,40 +88,41 @@
 }
 
 @media (max-width: $tablet-breakpoint) {
-  .main__heading {
+  .main__heading-text {
     padding: 179px 100px 70px;
   }
 
-  .main__heading--catalog {
+  .main__heading-text--catalog {
     padding: 92px 60px 40px;
   }
 }
 
 @media (max-width: $mobile-breakpoint) {
-  .main__heading {
+  .main__heading-text {
     padding: 187px 40px;
   }
 
-  .main__heading--catalog {
+  .main__heading-text--catalog {
     padding: 80px 20px 30px;
   }
-  .main__heading p {
+
+  .main__heading-text p {
     margin-bottom: 16px;
     font-size: 38px;
     line-height: 49.4px;
   }
 
-  .main__heading span {
+  .main__heading-text span {
     font-size: 30px;
     line-height: 0;
   }
 
-  .main__heading--catalog p {
+  .main__heading-text--catalog p {
     font-size: 34px;
     line-height: 44.2px;
   }
 
-  .main__heading--catalog span {
+  .main__heading-text--catalog span {
     font-size: 22px;
     line-height: 26.4px;
   }

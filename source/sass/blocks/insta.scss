@@ -1,14 +1,16 @@
 .insta {
+  display: flex;
+  flex-direction: column;
   padding-top: 108px;
-  padding-bottom: 123px
+  padding-bottom: 130px;
 }
 
 .insta__title {
   @include heading-style;
+  margin-bottom: 30px;
 }
 
 .insta__link {
-  padding-bottom: 3px;
   &::after {
     width: 74px;
   }
@@ -17,11 +19,11 @@
 .insta__list {
   @include list-style;
   display: grid;
-  grid-template-columns: 19.6% 34.3% repeat(2,19.6%);
+  grid-template-columns: 19.6% 34.3% repeat(2, 19.6%);
   grid-template-rows: repeat(2, auto);
   gap: 34px 27px;
   width: 100%;
-  margin-top: 60px;
+  margin-top: 55px;
 }
 
 .insta__item {
@@ -48,7 +50,7 @@
 @media (max-width: $tablet-breakpoint) {
   .insta {
     padding-top: 70px;
-    padding-bottom: 71px;
+    padding-bottom: 81px;
   }
 
   .insta__title {
@@ -62,15 +64,15 @@
 
 @media (max-width: $mobile-breakpoint) {
   .insta {
-    padding-top: 60px;
-    padding-bottom: 58px;
+    padding-top: 57px;
+    padding-bottom: 69px;
   }
 
   .insta__list {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 36% repeat(2,23%);
-    gap: 27px 24px;
-    margin-top: 50px;
+    grid-template-rows: 36% repeat(2, 23%);
+    gap: 30px 24px;
+    margin-top: 40px;
   }
 
   .insta__item {
