@@ -1,6 +1,6 @@
 .profile {
   display: flex;
-  gap: 100px;
+  // gap: 100px;
   padding-top: 80px;
 }
 
@@ -10,6 +10,7 @@
   grid-template-columns: 100px 1fr;
   grid-template-rows: repeat(3, min-content);
   gap: 30px 30px;
+  margin: 0 100px 0 0;
 }
 
 .profile__image-item {
@@ -159,7 +160,7 @@
 
 @media (max-width: $tablet-breakpoint) {
   .profile {
-    gap: 40px;
+    // gap: 40px;
     padding-top: 30px;
   }
 
@@ -167,6 +168,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 32%) 30%;
     gap: 14px 14px;
+    margin: 0 40px 0 0;
   }
 
   .profile__image-item {
@@ -213,7 +215,7 @@
 @media (max-width: $mobile-breakpoint) {
   .profile {
     flex-direction: column;
-    gap: 44px;
+    // gap: 44px;
     margin: 0 auto;
     padding-top: 0;
   }
@@ -222,6 +224,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     gap: 0 0;
+    margin: 0 0 44px;
   }
 
   .profile__image-item {
