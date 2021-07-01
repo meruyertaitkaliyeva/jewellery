@@ -6,22 +6,34 @@
 }
 
 .main__heading {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 100%;
   min-height: 463px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(86, 64, 52, 0.7);
+  }
 
   &--catalog {
     min-height: 261px;
   }
 }
 
-.main__heading-bg,
 .main__heading-text {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   min-height: 463px;
+  padding: 182px 350px 60px;
 }
 
 .main__heading-img,
@@ -32,20 +44,8 @@
   }
 }
 
-.main__heading-bg {
-  background: rgba(86, 64, 52, 0.7);
-}
-
-.main__heading-text {
-  padding: 182px 350px 60px;
-}
-
-.main__heading-bg--catalog,
 .main__heading-text--catalog {
   min-height: 261px;
-}
-
-.main__heading-text--catalog {
   padding: 92px 130px 50px;
 }
 

@@ -3,16 +3,15 @@
   flex-direction: column;
   position: relative;
   // width: 100%;
-  padding: 43px 0 18px;
+  padding: 43px 98px 18px;
   box-sizing: border-box;
 
   &::after {
     content: "";
     position: absolute;
     top: 115px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 350%;
+    left: -98px;
+    width: calc(100% + 98px * 2);
     height: 1px;
     background-color: $light-grey;
   }

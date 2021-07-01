@@ -1,7 +1,7 @@
 .catalog {
   display: flex;
   justify-content: space-between;
-  padding: 80px 0 73px;
+  padding: 80px 98px 73px;
 }
 
 .catalog__filter-button {
@@ -18,7 +18,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 36px 30px;
-  padding-bottom: 33px;
+  padding-bottom: 30px;
 }
 
 .catalog__item {
@@ -27,6 +27,7 @@
 
 .catalog__img-box {
   img {
+    height: auto;
     aspect-ratio: 270/272;
   }
 }
@@ -116,7 +117,7 @@
 @media (max-width: $tablet-breakpoint) {
   .catalog {
     flex-direction: column;
-    padding-top: 50px;
+    padding: 50px 45px 73px;
   }
 
   .catalog__filter-button {
@@ -135,6 +136,10 @@
     width: 100%;
   }
 
+  .catalog__item {
+    margin: 0 auto;
+  }
+
   .catalog__img-box {
     img {
       aspect-ratio: 206/208;
@@ -144,12 +149,12 @@
 
 @media (max-width: $mobile-breakpoint) {
   .catalog {
-    padding: 40px 0 65px;
+    padding: 40px 15px 65px;
   }
 
   .catalog__list {
     grid-template-columns: repeat(2, 1fr);
-    gap: 27px 30px;
+    gap: 26px 30px;
     padding: 0;
     margin-bottom: 42px;
   }

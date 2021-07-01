@@ -14,22 +14,9 @@
 }
 
 .filter__accordeon {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 35px;
-}
-
-.accordeon__no-js .filter__type {
-  padding: 28px 25px 29px;
-}
-
-.accordeon__no-js .filter__item-title {
-  padding: 0 0 30px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 23.4px;
-}
-
-.accordeon__no-js .filter__list {
-  padding: 0;
 }
 
 .filter__item-title,
@@ -271,10 +258,6 @@
   .filter__item label {
     font-size: 16px;
     line-height: 20.8px;
-  }
-
-  .accordeon__no-js .filter__type {
-    padding: 40px;
   }
 }
 

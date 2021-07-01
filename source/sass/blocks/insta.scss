@@ -20,8 +20,8 @@
   @include list-style;
   display: grid;
   grid-template-columns: 19.6% 34.3% repeat(2, 19.6%);
-  grid-template-rows: repeat(2, auto);
-  gap: 34px 27px;
+  grid-template-rows: 55% 36.5%;
+  gap: 8.7% 2.2%;
   width: 100%;
   margin-top: 55px;
 }
@@ -58,14 +58,14 @@
   }
 
   .insta__list {
-    gap: 20px 16px;
+    gap: 9% 2.2%;
   }
 }
 
 @media (max-width: $mobile-breakpoint) {
   .insta {
     padding-top: 57px;
-    padding-bottom: 69px;
+    padding-bottom: 65px;
   }
 
   .insta__list {

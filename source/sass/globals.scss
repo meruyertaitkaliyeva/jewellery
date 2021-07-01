@@ -15,7 +15,7 @@ a {
 img {
   display: block;
   max-width: 100%;
-  height: auto;
+  // height: auto;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -143,16 +143,16 @@ input[type="radio"].visually-hidden {
 }
 
 .container {
+  max-width: 1366px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0;
-  max-width: 1170px;
-  width: 85.5%;
+  padding: 0 98px;
 
   @media (max-width: $tablet-breakpoint) {
-    width: 88%;
+    padding: 0 45px;
   }
 
   @media (max-width: $mobile-breakpoint) {
-    width: 90%;
+    padding: 0 15px;
   }
 }

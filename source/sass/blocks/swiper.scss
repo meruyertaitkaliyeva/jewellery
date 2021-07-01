@@ -1,6 +1,9 @@
 .swiper {
   display: flex;
   flex-direction: column;
+  max-width: 1170px;
+  width: 86%;
+  margin: 0 auto;
   padding: 120px 0 115px;
   overflow: hidden;
 }
@@ -138,6 +141,7 @@
 
 @media (max-width: $tablet-breakpoint) {
   .swiper {
+    width: 88%;
     padding: 70px 0 65px;
   }
 
@@ -181,6 +185,7 @@
 
 @media (max-width: $mobile-breakpoint) {
   .swiper {
+    width: 90%;
     padding: 60px 0 55px;
   }
 

@@ -123,7 +123,7 @@
   display: block;
   width: 100%;
   margin-bottom: 16px;
-  padding: 28px 0;
+  padding: 28px 40px;
   text-align: center;
   color: $basic-white;
   background-color: $light-brown;
@@ -198,6 +198,8 @@
   }
 
   .profile__folder {
+    display: flex;
+    flex-direction: column;
     max-width: unset;
     width: 69%;
   }
