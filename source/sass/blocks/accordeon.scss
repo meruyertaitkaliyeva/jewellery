@@ -1,22 +1,9 @@
-.accordeon-no-js .accordeon__title {
-  display: block;
-  margin: 0;
-}
-
-.accordeon-no-js .accordeon__button {
-  display: none;
-}
-
 .accordeon__item {
   border: 1px solid $light-brown;
 
   &:not(:last-of-type) {
     border-bottom: none;
   }
-}
-
-.accordeon__title {
-  display: none;
 }
 
 .accordeon__button {
@@ -44,6 +31,14 @@
   }
 }
 
+.accordeon-no-js .accordeon__button {
+  cursor: default;
+
+  &::after {
+    content: none;
+  }
+}
+
 .active-item {
   &::after {
     transform: rotate(0deg);
@@ -65,11 +60,3 @@
     }
   }
 }
-
-// @media (max-width: $mobile-breakpoint) {
-//   .accordeon__button {
-//     &::after {
-//       top: 50%;
-//     }
-//   }
-// }

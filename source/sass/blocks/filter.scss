@@ -31,10 +31,21 @@
   }
 }
 
-.filter__list {
-  @include list-style;
+.filter__panel {
   display: none;
   padding: 0 35px 29px;
+
+  &--price {
+    padding: 6px 25px 16px;
+  }
+}
+
+.accordeon-no-js .filter__panel {
+  display: block;
+}
+
+.filter__list {
+  @include list-style;
 }
 
 .filter__item {
@@ -98,10 +109,8 @@
 }
 
 .filter__price {
-  display: none;
   position: relative;
   height: 35px;
-  margin: 6px 25px 16px;
 }
 
 .filter__price input {

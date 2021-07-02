@@ -10035,10 +10035,6 @@ __webpack_require__.r(__webpack_exports__);
   const accordeon = document.querySelectorAll('.accordeon');
   const accordeonButton = document.querySelectorAll('.accordeon__button');
 
-  accordeon.forEach(function (acc) {
-    acc.classList.remove('accordeon-no-js');
-  })
-
   function hideAll() {
     accordeonButton.forEach(function (acc) {
       acc.classList.remove('active-item');

@@ -78,6 +78,9 @@
   display: flex;
   flex-wrap: wrap;
   order: 2;
+  position: absolute;
+  right: 98px;
+  // margin-left: auto;
 }
 
 .header__user-item {
@@ -101,8 +104,11 @@
   @include list-style;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  left: 35%;
+  transform: translateX(-50%);
   width: fit-content;
-  margin: 91px auto 0;
+  margin: 91px 0 0;
 }
 
 .header__navigation-item {
@@ -137,7 +143,7 @@
   .header {
     width: 100%;
     min-height: 126px;
-    padding: 52px 45px;
+    padding: 52px 0;
 
     &::after {
       content: none;
@@ -247,6 +253,14 @@
   }
 
   .header__navigation-list,
+  .header__user-list {
+    position: relative;
+    left: unset;
+    right: unset;
+    transform: unset;
+  }
+
+  .header__navigation-list,
   .header__user-list,
   .header__navigation-wrapper {
     flex-direction: column;
@@ -327,7 +341,7 @@
 @media (max-width: $mobile-breakpoint) {
   .header {
     min-height: 92px;
-    padding: 38px 15px 38px;
+    padding: 38px 0 38px;
   }
 
   .header__logo {
