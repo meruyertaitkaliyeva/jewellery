@@ -27,6 +27,7 @@
 
 .catalog__img-box {
   img {
+    width: 100%;
     height: auto;
     aspect-ratio: 270/272;
   }
@@ -134,10 +135,6 @@
 
   .catalog__wrapper {
     width: 100%;
-  }
-
-  .catalog__item {
-    margin: 0 auto;
   }
 
   .catalog__img-box {

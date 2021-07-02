@@ -12,71 +12,73 @@
 </head>
 
 <body>
-  <header class="header header-closed header-no-js container">
-    <a href="main.html" class="header__logo">
-      <svg width="66" height="66" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-        focusable="false">
-        <use xlink:href="img/sprite.svg#icon-logo"></use>
-      </svg>
-    </a>
-    <div class="header__buttons">
-      <button type="button" class="header__button header__button--burger">
-        <svg width="25" height="18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <use xlink:href="img/sprite.svg#icon-burger"></use>
+  <header class="header header-closed header-no-js">
+    <div class="header__wrapper container">
+      <a href="main.html" class="header__logo">
+        <svg width="66" height="66" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+          focusable="false">
+          <use xlink:href="img/sprite.svg#icon-logo"></use>
         </svg>
-      </button>
-      <button type="button" class="header__button header__button--cart">
-        <svg width="20" height="18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <use xlink:href="img/sprite.svg#icon-cart"></use>
-        </svg>
-      </button>
+      </a>
+      <div class="header__buttons">
+        <button type="button" class="header__button header__button--burger">
+          <svg width="25" height="18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <button type="button" class="header__button header__button--cart">
+          <svg width="20" height="18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#icon-cart"></use>
+          </svg>
+        </button>
+      </div>
+      <nav class="header__navigation">
+        <form method="post">
+          <div class="header__navigation-search">
+            <label for="search">
+              <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#icon-lens"></use>
+              </svg>
+            </label>
+            <input type="text" name="search" id="search" placeholder="Type here to search">
+          </div>
+        </form>
+        <ul class="header__user-list">
+          <li class="header__user-item header__user-item--about">
+            <a href="#">About CH</a>
+          </li>
+          <li class="header__user-item header__user-item--stores">
+            <a href="#">Stores & Hours</a>
+          </li>
+          <li class="header__user-item header__user-item--contacts">
+            <a href="#">Contact Us</a>
+          </li>
+          <li class="header__user-item header__user-item--login">
+            <a href="loginmodal.html" target="_blank">Login</a>
+          </li>
+          <li class="header__user-item header__user-item--cart">
+            <a href="#">Cart <span class="cart-count">0</span></a>
+          </li>
+        </ul>
+        <ul class="header__navigation-list">
+          <li class="header__navigation-item">
+            <a href="#">What's new</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#">Chokers</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#">Necklaces</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#">Rings</a>
+          </li>
+          <li class="header__navigation-item">
+            <a href="#">Earrings</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="header__navigation">
-      <form method="post">
-        <div class="header__navigation-search">
-          <label for="search">
-            <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-              <use xlink:href="img/sprite.svg#icon-lens"></use>
-            </svg>
-          </label>
-          <input type="text" name="search" id="search" placeholder="Type here to search">
-        </div>
-      </form>
-      <ul class="header__user-list">
-        <li class="header__user-item header__user-item--about">
-          <a href="#">About CH</a>
-        </li>
-        <li class="header__user-item header__user-item--stores">
-          <a href="#">Stores & Hours</a>
-        </li>
-        <li class="header__user-item header__user-item--contacts">
-          <a href="#">Contact Us</a>
-        </li>
-        <li class="header__user-item header__user-item--login">
-          <a href="loginmodal.html" target="_blank">Login</a>
-        </li>
-        <li class="header__user-item header__user-item--cart">
-          <a href="#">Cart <span class="cart-count">0</span></a>
-        </li>
-      </ul>
-      <ul class="header__navigation-list">
-        <li class="header__navigation-item">
-          <a href="#">What's new</a>
-        </li>
-        <li class="header__navigation-item">
-          <a href="#">Chokers</a>
-        </li>
-        <li class="header__navigation-item">
-          <a href="#">Necklaces</a>
-        </li>
-        <li class="header__navigation-item">
-          <a href="#">Rings</a>
-        </li>
-        <li class="header__navigation-item">
-          <a href="#">Earrings</a>
-        </li>
-      </ul>
-    </nav>
   </header>
   <main class="main main--catalog">
     <h1 class="visually-hidden">CH Jewellery Catalog Page</h1>
