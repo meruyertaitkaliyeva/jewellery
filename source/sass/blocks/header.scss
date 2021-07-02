@@ -45,6 +45,7 @@
 .header__navigation {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .header__navigation-search {
@@ -79,7 +80,7 @@
   flex-wrap: wrap;
   order: 2;
   position: absolute;
-  right: 98px;
+  right: 0;
   // margin-left: auto;
 }
 
