@@ -7,6 +7,7 @@
 }
 
 .accordeon__button {
+  @include transition;
   position: relative;
   width: 100%;
   border: none;
@@ -28,6 +29,15 @@
     background-image: url("../img/icon-angle.svg");
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  &:hover,
+  &:focus {
+    color: $light-brown;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 

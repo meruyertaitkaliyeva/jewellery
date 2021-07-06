@@ -78,6 +78,7 @@
 
 .swiper-slide__img-box {
   img {
+    height: 100%;
     aspect-ratio: 270/284;
   }
 }
@@ -209,5 +210,9 @@
   .swiper-slide__description {
     width: 130px;
     margin-top: 17px;
+  }
+
+  .swiper-pagination {
+    color: $basic-dark;
   }
 }

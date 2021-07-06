@@ -213,11 +213,21 @@
 
   .footer__title {
     margin-bottom: 11px;
+    padding: 0 50px 0 0;
   }
 
   .footer__subscription p {
     margin-bottom: 39px;
+    padding: 0 50px 0 0;
     line-height: 22.4px;
+  }
+
+  .footer__subscription-form {
+    width: 100%;
+  }
+
+  .footer__subscription-signup svg {
+    margin-left: 9px;
   }
 
   .footer__info-list {

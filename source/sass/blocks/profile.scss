@@ -7,7 +7,7 @@
 .profile__image-list {
   @include list-style;
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 16.65% 78.34%;
   grid-template-rows: repeat(3, min-content);
   gap: 30px 30px;
   margin: 0 100px 0 0;
@@ -32,7 +32,7 @@
 .profile__img-box {
   img {
     width: 100%;
-    height: max-content;
+    height: 100%;
     object-fit: cover;
   }
 }

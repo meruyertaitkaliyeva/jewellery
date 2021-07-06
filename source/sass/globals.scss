@@ -18,6 +18,11 @@ img {
   // height: auto;
 }
 
+input[type="text"],
+input[type="email"] {
+  border-radius: 0;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -55,6 +60,8 @@ input[type="radio"].visually-hidden {
   @include transition;
   display: block;
   position: relative;
+  width: fit-content;
+  margin: 0 auto;
   padding-bottom: 10px;
   font-weight: 500;
   font-size: 16px;

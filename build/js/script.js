@@ -10000,21 +10000,46 @@ __webpack_require__.r(__webpack_exports__);
     slidesPerView: 2,
     spaceBetween: 30,
     slidesPerGroup: 2,
-    breakpoints: {
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        slidesPerGroup: 4
-      }
-    },
+    // breakpoints: {
+    //   1024: {
+    //     slidesPerView: 4,
+    //     spaceBetween: 30,
+    //     slidesPerGroup: 4
+    //   }
+    // },
     loop: true,
     loopFillGroupWithBlank: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      type: 'custom',
+      renderCustom: function (swiper, current, total) {
+        return current + '&nbsp; of &nbsp;' + (total);
+      }
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 2,
+        pagination: {
+          type: 'bullets',
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          }
+        }
       },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        slidesPerGroup: 4,
+        pagination: {
+          type: 'bullets',
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+          }
+        }
+      }
     },
     navigation: {
       nextEl: '.swiper-button-next',
@@ -10070,16 +10095,17 @@ __webpack_require__.r(__webpack_exports__);
   const loginLink = document.querySelector('.header__user-item--login');
   const loginModal = document.querySelector('.login-modal');
   const loginOverlay = document.querySelector('.login-modal__overlay');
-  const loginWindow = document.querySelector('.login-modal__window');
+  // const loginWindow = document.querySelector('.login-modal__window');
   const loginClose = document.querySelector('.login-modal__close');
   const loginEmail = document.querySelector('#modal-email');
+  const catalog = document.querySelector('.catalog');
   const filter = document.querySelector('.filter');
   const filterOpenButton = document.querySelector('.catalog__filter-button');
   const filterCloseButton = document.querySelector('.filter__close');
   const addButton = document.querySelector('.profile__add');
   const cartModal = document.querySelector('.cart-modal');
   const cartOverlay = document.querySelector('.cart-modal__overlay');
-  const cartWindow = document.querySelector('.cart-modal__window');
+  const cartPlus = document.querySelector('.cart-modal__control--plus');
   const cartClose = document.querySelector('.cart-modal__close');
   const cartCount = document.querySelector('.cart-count');
   let count = 0;
@@ -10158,6 +10184,7 @@ __webpack_require__.r(__webpack_exports__);
       evt.preventDefault();
       openModalWindow(cartOverlay);
       addModalShade(cartModal);
+      cartPlus.focus();
       count = count + 1
       cartCount.innerHTML = count;
     });
@@ -10187,7 +10214,7 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   if (window.location.href.endsWith('catalog.html')) {
-    removeNoJs(filter);
+    removeNoJs(catalog);
 
     filterOpenButton.addEventListener('click', function () {
       openModalWindow(filter);

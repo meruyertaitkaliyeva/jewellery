@@ -95,9 +95,9 @@
         <p>All Jewellery <span>Discover picks of fashion's finest trends in our jewellery catalog</span></p>
       </div>
     </div>
-    <div class="main__catalog catalog container">
+    <div class="main__catalog catalog container modal__no-js">
       <button class="catalog__filter-button button" type="button">Filter</button>
-      <article class="catalog__filter filter filter--nojs">
+      <article class="catalog__filter filter">
         <h2 class="visually-hidden">Filter set</h2>
         <div class="filter__wrapper">
           <form method="get">
@@ -517,11 +517,6 @@
   <section class="login-modal modal">
     <div class="login-modal__overlay modal__overlay ">
       <div class="login-modal__window modal__window">
-        <button class="login-modal__close modal__close" type="button" aria-label="Close window">
-          <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-            <use xlink:href="img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
         <div class="login-modal__img-box">
           <picture>
             <source
@@ -552,6 +547,11 @@
             </div>
           </form>
         </div>
+        <button class="login-modal__close modal__close" type="button" aria-label="Close window">
+          <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
   </section>

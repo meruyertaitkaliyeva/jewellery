@@ -41,6 +41,7 @@
   img {
     width: 100%;
     height: fit-content;
+    object-fit: cover;
   }
 }
 
@@ -89,7 +90,7 @@
 
 @media (max-width: $tablet-breakpoint) {
   .main__heading-text {
-    padding: 179px 100px 70px;
+    padding: 179px 119px 70px 100px;
   }
 
   .main__heading-text--catalog {

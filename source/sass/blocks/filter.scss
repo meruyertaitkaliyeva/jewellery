@@ -90,6 +90,11 @@
     background-color: $light-brown;
   }
 
+  &:focus + label::before,
+  &:checked:focus + label::before {
+    box-shadow: 0 0 0 2px $light-brown;
+  }
+
   &:active + label::before,
   &:checked:active + label::before {
     opacity: 0.5;
@@ -198,6 +203,7 @@
     width: 100%;
     height: 100%;
     background-color: $basic-white;
+    z-index: 3;
   }
 
   .filter__wrapper {
@@ -251,6 +257,16 @@
 
   .filter__close svg {
     fill: $basic-white;
+  }
+
+  .modal__no-js .filter {
+    position: relative;
+    top: unset;
+    left: unset;
+  }
+
+  .modal__no-js .filter__close {
+    display: none;
   }
 
   .filter__item-title,
