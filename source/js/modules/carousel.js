@@ -52,4 +52,8 @@ import Swiper from '../vendor/swiper';
       prevEl: '.swiper-button-prev',
     },
   });
+
+  window.addEventListener('resize', function () {
+    swiper.pagination.update();
+  });
 })();

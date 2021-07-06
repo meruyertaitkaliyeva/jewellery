@@ -10046,6 +10046,10 @@ __webpack_require__.r(__webpack_exports__);
       prevEl: '.swiper-button-prev',
     },
   });
+
+  window.addEventListener('resize', function () {
+    swiper.pagination.update();
+  });
 })();
 
 
